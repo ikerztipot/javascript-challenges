@@ -50,8 +50,11 @@ window.onload = () => {
     }
 
     /* Listeners */
-    video.addEventListener('keyup', (e) => {
-        if(e.key === '32') togglePlay(e);
+    window.addEventListener('keyup', (e) => {
+        console.log(e.code);
+        if(e.code === 'Space'){
+            togglePlay(e);
+        }
     });
     video.addEventListener('click', togglePlay);
     video.addEventListener('play', changeIcon);
